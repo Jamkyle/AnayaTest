@@ -364,7 +364,7 @@
             if( i == elems.length-1){setTimeout(function(){drawlogo(elems[i]); i=0; fillIt(elems[i], i);},150)
           } //draw last item and fill it
           //  if(i==13){setTimeout(function(){},10)}
-            else if( i >= elems.length-2){ setTimeout(function(){drawlogo(elems[i]); i++; startDraw(i);},150) }
+            else if( i >= elems.length-2){setTimeout(function(){drawlogo(elems[i]); i++; startDraw(i);},150) }
             else if(i > elems.length-5){setTimeout(function(){drawlogo(elems[i]); i++; startDraw(i)},50)}
             else if(i==elems.length-6){setTimeout(function(){drawlogo(elems[i]); i++; startDraw(i)},400)}
             else if(i>elems.length-9){setTimeout(function(){drawlogo(elems[i]); i++; startDraw(i)},10)}
@@ -398,8 +398,9 @@
               pointerEvents:"none",
               strokeWidth:2,
               stroke: "#525252",
-              fill: this.color,
-              fillOpacity: 0,
+              // fill: this.color,
+              fill: "0a0a0a",
+              fillOpacity: 0.2,
               strokeDasharray:300,
               strokeDashoffset:750
             });
@@ -409,7 +410,7 @@
           .attr({
             class:'innerRect',
             pointerEvents:'none',
-            fill:'#eaeaea',
+            fill:'#303030',
             stroke:'none',
             transform: 'rotate(-45,-200,400)'
           });
@@ -471,6 +472,17 @@
             el.selectAll(".red").animate({fill:'#232323'},500);
           el.select('text').animate({fillOpacity:0, transform:'rotate(-45,-250,420)'},500,mina.easein);
         }
+
+        function afficheCadre(){
+          var cadres = document.getElementsByClassName('cadre');
+          for(var i =0;i<cadres.length; i++){
+            cadres[i].style.display='inline-block';
+            // cadres[i].style.opacity='0';
+            // cadres[i].style.animation='show_left 1s ease-in forwards, transparence 0.5s 0.2s linear reverse forwards';
+          }
+          initCadre();
+        }
+        setTimeout(function(){afficheCadre()}, 4000);
     </script>
     <script type="text/javascript"> // animation Cadre
       function animateCadre(svg, over){
@@ -485,6 +497,9 @@
             elem.style.animation='rotation 1s 0.4s ease-out infinite';
             if(svg.getAttribute('id')=='audio')
             elem.style.animation='jump 1s 0.4s ease-out infinite';
+
+            if(svg.getAttribute('id')=='photo')
+            elem.style.animation='ring 1s 0.5s ease-out infinite';
           }
           // else elem.style.transform='rotate(0deg)';
           else elem.style.animation='';
@@ -525,13 +540,18 @@
         Section.prototype.make = function(url){
           var overlay = document.getElementById("overlay");
           overlay.style.display = 'block';
-          if(this.section.id == 'section-'+url)
+          if(this.section.id == 'section-'+url){
             this.section.style.display='block';
+            this.section.style.border='1px solid white';
+
+          }
           this.rect.animate({transform:'s1.2'},300,mina.easeout);
           this.close.animate({fillOpacity:1},300);
           var loop = this.section.getElementsByClassName('video');
           for(var i=0; i<loop.length; i++)
             afficheElem(loop[i], i);
+
+
         }
         Section.prototype.fermer = function(){
           this.rect.animate({transform:'matrix(1,0,0,1,0,500)'},100,function(){close()});
@@ -555,7 +575,8 @@
     </script>
     <script type="text/javascript"> //Action and init elem
       //Create ELements Svg
-      var section = new Section(document.getElementById("section-video"));
+      function initCadre(){
+      var section = new Section(document.getElementById("section-video")); //create Section Video
       section.close.click(function(){section.fermer()});
 
       // Elements Cadres
@@ -587,17 +608,19 @@
       videoSvg.mouseout(function(e){video.unMake(), animateCadre(e.target,false)});
       videoSvg.click(function(){video.click(section)});
 
-      photoSvg.mouseover(function(){photo.make()});
-      photoSvg.mouseout(function(){photo.unMake()});
+      photoSvg.mouseover(function(e){photo.make();animateCadre(e.target,true)});
+      photoSvg.mouseout(function(e){photo.unMake();animateCadre(e.target,false)});
       photoSvg.click(function(){photo.click()});
 
       evenSvg.mouseover(function(){even.make()});
       evenSvg.mouseout(function(){even.unMake()});
       evenSvg.click(function(){even.click()});
-
       //fermer si click overlay
       var overlay = document.getElementById('overlay');
       overlay.addEventListener('click', function(event){ if(event.target == overlay)section.fermer(); });
+}
+
+
     </script>
     <script type="text/javascript" src='js/anime2.js'></script>
     <script type="text/javascript" >//les videos
@@ -610,7 +633,7 @@
       var divplay = function onYouTubeIframeAPIReady(id) {
           player = new YT.Player('player', {
             videoId: id,
-            playerVars : {'rel':0},
+            playerVars : {'rel':0, 'fs':0},
             events: {
               'onReady': onPlayerReady,
               'onStateChange': onPlayerStateChange
