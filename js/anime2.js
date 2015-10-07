@@ -9,6 +9,7 @@
     var canvas = document.getElementById('canvas'), //getcanvas
         context = canvas.getContext('2d'); //get context
         canvas.style.position= 'absolute';
+
     var lcurves= new Array();
     var stars = new Array();
     var inter=10000;
@@ -16,6 +17,10 @@
     var aStart = (new Date()).getTime(); //var startTime stars
     // resize the canvas to fill browser window dynamically
     var W=window.innerWidth, H=window.innerHeight;
+    var gradient = context.createLinearGradient(0, H/2-100, 0,H/2+100);
+    gradient.addColorStop(0, "rgba(180,180,180,0.1)");
+    gradient.addColorStop(0.5, "rgba(180,180,180,0.032)");
+    gradient.addColorStop(1, "rgba(180,180,180, 0.1)");
     // window.addEventListener('resize', resizeCanvas, true);
     function resizeCanvas() {
         canvas.width = W;
@@ -67,8 +72,8 @@
         // context.strokeStyle = gradient;
         context.strokeStyle = 'rgba(180,180,180,0.14)';
 
-        context.fillStyle = 'rgba(255,255,255,0.03)';
-        // context.fillStyle = gradient;
+        // context.fillStyle = 'rgba(255,255,255,0.043)';
+        context.fillStyle = gradient;
         context.stroke();
         context.fill();
         context.restore();

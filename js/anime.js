@@ -52,12 +52,6 @@
 
     }
 
-    function drawStar(curve){
-        var style = 'width: ' + size + 'px; height: ' + size + 'px; left: ' + posX + 'px; top: ' + posY + 'px;' + randomAnimDuration + '-webkit-border-radius:'+ size + 'px; -moz-border-radius: ' + size + 'px; border-radius:' +size + 'px;';
-
-    curve.append('<div class="star" style="' + style + '"></div>');
-    }
-
     function animate(curves, canvas, context, startTime){
 
         var time = (new Date()).getTime() - startTime;

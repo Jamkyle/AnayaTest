@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Anaya-association</title>
-    <link rel="stylesheet" href="./css/style.css" media="screen" title="no title" charset="utf-8">
+    <!-- <link rel="stylesheet" href="./css/style.css" media="screen" title="no title" charset="utf-8"> -->
     <link rel="stylesheet" href="./css/bubble.css" media="screen" title="no title" charset="utf-8">
     <link href='http://fonts.googleapis.com/css?family=Comfortaa:700&effect=outline' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Convergence' rel='stylesheet' type='text/css'>
@@ -11,6 +11,7 @@
     <script type="text/javascript" src='js/snap.svg-min.js'></script>
   </head>
   <body>
+    <div class='mask'></div>
     <div id='main'>
       <canvas id="canvas"></canvas>
       <div class="logo">
@@ -145,9 +146,45 @@
           </defs>
         </svg>
       </div>
-      <div class="menu">
+      <div class="menu_info">
         <div class="cadre">
-          <svg id='video' class='cadre' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="300 0 1 600" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+          <svg version="1.1" class='cadre _door' id="contact" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="300 0 1 600" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+            <g id='gContact' style='fill:#232323; stroke:none;pointer-events: none' transform='matrix(1,0,0,1,50,60)'>
+            <rect class='beat screen' x="224.6" y="123.5" width="49.6" height="25"/>
+            <path class="st1" d="M271,125c0.7,0,1.1,2,1.1,3.3c0,3.2-2.8,5.8-6.1,5.8h-24.2c-3.4,0-6.1-2.5-6.1-5.8
+            	c0-1.2,0.4-3.3,1.1-3.3H193v250h122V125H271z M227.8,139.9c-1.8,0-3.2-1.3-3.2-3s1.4-3,3.2-3c1.8,0,3.2,1.3,3.2,3
+            	S229.6,139.9,227.8,139.9z M265,137.4c0,0.3-0.2,0.6-0.5,0.6h-8.1c-0.4,0-0.3-0.3-0.3-0.6v-0.8c0-0.3-0.1-0.6,0.3-0.6h8.1
+            	c0.4,0,0.5,0.3,0.5,0.6V137.4z M252,137.4c0,0.3,0.2,0.6-0.2,0.6h-8.1c-0.4,0-0.7-0.3-0.7-0.6v-0.8c0-0.3,0.3-0.6,0.7-0.6h8.1
+            	c0.4,0,0.2,0.3,0.2,0.6V137.4z M253.9,373.3c-6.8,0-12.3-4.8-12.3-10.7c0-5.9,5.5-10.7,12.3-10.7c6.8,0,12.3,4.8,12.3,10.7
+            	C266.2,368.6,260.7,373.3,253.9,373.3z"/>
+            <g >
+            	<rect class='beat inner_phone' style='fill:#252525; fillOpacity:0.01'id="XMLID_5_" x="195" y="152" width="116" height="197"/>
+            	<ellipse id="XMLID_6_" class="st2" cx="253.9" cy="362.7" rx="12.3" ry="10.7"/>
+            </g>
+            <g >
+            	<path d="M323.4,169.2c0.4-0.2,0.6-0.6,0.6-1.1v-27.8c0-12.8-10.9-23.2-24.4-23.2h-93.1c-13.5,0-24.5,10.4-24.5,23.2
+            		v3.5c0,0.5,0.2,0.9,0.5,1.3c0.5,0.6,0.5,1.4,0.5,2.2v37.5c0,0.8-0.1,1.6-0.5,2.2c0,0,0,0.1,0,0.1l-0.9,0.3
+            		c-0.2,0.1-0.5,0.3-0.5,0.5v13.9c0,0.2,0.1,0.4,0.3,0.5l0.7,0.1v0.2v2.8v7.9l-0.7,0.1c-0.2,0.1-0.3,0.3-0.3,0.5v14.9
+            		c0,0.2,0.3,0.4,0.5,0.5l0.5,0.1v9.5v119.8c0,12.8,11,23.2,24.5,23.2h93.1c13.5,0,24.4-10.4,24.4-23.2v-174c0-0.4-0.2-0.8-0.6-1.1
+            		c-0.2-0.1-0.4-0.3-0.4-0.5v-1.2l1-0.7v-10.2l-1-0.7v-0.9C323,169.5,323.1,169.3,323.4,169.2z M311,357.4c0,8.1-6.5,14.6-15,14.6
+            		h-32.7c-0.4,0-0.9,0.1-1.2,0.4c-2,1.7-5.5,2.5-8.3,2.5s-6.2-0.8-8.3-2.5c-0.3-0.3-0.8-0.4-1.2-0.4h-34c-8.6,0-15.3-6.7-15.3-14.9
+            		V143.7c0-8.1,6.6-14.7,15.2-14.7h35.2c0.8,0,1.5-0.4,1.8-1c1-2,3.6-3.5,6.7-3.5s5.7,1.4,6.7,3.5c0.3,0.6,1,1,1.8,1h34
+            		c8.4,0,14.8,6.5,14.8,14.4V357.4z"/>
+            	<path d="M253.8,133c2.4,0,4.3-1.5,4.3-3.3c0-1.8-1.9-3.3-4.3-3.3s-4.3,1.5-4.3,3.3C249.5,131.5,251.4,133,253.8,133
+            		z M253.9,128.7c0.6,0,1.1,0.5,1.1,1s-0.5,1-1.1,1c-0.6,0-1.1-0.5-1.1-1S253.3,128.7,253.9,128.7z"/>
+            	<path d="M270.8,266h-32.9c-15.4,0-28.2,18.6-29.7,41h92.4C299,284.6,286.2,266,270.8,266z"/>
+            	<path d="M224.9,232.8c0.6,3.4,3.4,16.7,11.1,21.1c-0.1,0.7,0.4,1.5,1.2,2c1.1,0.6,2.4,0.5,2.9-0.3
+            		c0.5-0.8,0.1-1.9-0.9-2.6c-0.9-0.6-2-0.5-2.6,0l-11-20.2c0.1,0,0.2,0,0.3,0c0.6,0,1.1-0.1,1.7-0.3c2.9,12.1,13.5,21,26,21
+            		c14.8,0,26.8-12.4,26.8-27.8s-12-27.8-26.8-27.8c-12.5,0-23,8.9-26,20.9c-0.5-0.2-1.3-0.3-1.9-0.3c-2.9,0-5.5,2.3-5.5,5.1v4.1
+            		C220,230.4,222.3,232.5,224.9,232.8z"/>
+            </g>
+          </g>
+          </svg>
+        </div>
+      </div>
+      <div class="menu">
+        <div class=" cadre ">
+          <svg id='video' class='cadre _door' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="300 0 1 600" style="enable-background:new 300 0 1 600;" xml:space="preserve">
             <style type="text/css">
               .icon-video{stroke-miterlimit:10;pointer-events: none}
             </style>
@@ -176,7 +213,7 @@
           </svg>
         </div>
         <div class="cadre">
-          <svg version="1.1" class='casque cadre' id="audio" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="300 0 1 600" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+          <svg version="1.1" class='casque cadre _door' id="audio" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="300 0 1 600" style="enable-background:new 0 0 500 500;" xml:space="preserve">
             <!-- <rect id="rectAudio" x="1" y="1" width="599" height='598' style='pointer-events:none;stroke-width:2; stroke: #525252; fill:#205072;fill-opacity:0' stroke-dashoffset="750" stroke-dasharray="300"/> -->
 
             <g id="g" class='group' style='fill:#232323; stroke:#232323' transform='translate(0,0)' >
@@ -192,7 +229,7 @@
           </svg>
         </div>
         <div class="cadre">
-          <svg version="1.1" id="photo" class='cadre' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg version="1.1" id="photo" class='cadre _door' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewBox="300 0 1 600" style="enable-background:new 0 0 500 500">
 
             <g id="gPhoto" transform='translate(50,60)' style='pointer-events:none;fill:#232323'>
@@ -214,7 +251,7 @@
           </svg>
         </div>
         <div class="cadre">
-          <svg version="1.1" id="event" class='cadre' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="300 0 1 600" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+          <svg version="1.1" id="event" class='cadre _door' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="300 0 1 600" style="enable-background:new 0 0 500 500;" xml:space="preserve">
             <g id="gEven" style='fill:#232323;pointer-events:none'transform="translate(50,10)">
                     <g style='pointer-events:none'>
                       <path  d="M347,220v-17.3c0-7-5.7-12.7-12.7-12.7H164.7c-7,0-12.7,5.7-12.7,12.7V220H347z"/>
@@ -268,11 +305,7 @@
       <section id='overlay'>
         <section id='section-video' class="section">
           <div id='liste'>
-
           </div>
-
-
-
           <div id='actualV' class="actual">
             <!-- <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/CdUn-WS6ks8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
             <div id='player'>
@@ -299,331 +332,19 @@
           </svg>
         </section>
       </section>
+    <footer class='foot_container'></footer>
     </div>
-    <script type="text/javascript"> //logo
-      var logoSvg = document.getElementById('logoSvg');
-      var elems = logoSvg.getElementsByTagName('path'); //list paths logo
-      var gLogo = document.getElementById('gLogo');
-        function drawlogo(anElem){ // dessine un element du logo
-          var style = anElem.style;
-          style.animation= "draw 0.4s linear forwards"; //start stroke
-          if(navigator.userAgent.indexOf("Chrome") != -1 )
-          if (anElem.className.animVal.indexOf('blurme')>-1) {
-            setTimeout(function(){anElem.style.filter = 'url(#f2)';}, 300) //blur elements
-          }
-        }
-        function fillIt(anElem, i){ //colorie le logo
-          //Decomment si image
-          //document.getElementById('logo').style.animation = 'transparence 1s linear 1 forwards reverse';
-          if (anElem!=null) {
-            if(anElem.className.animVal.indexOf('fillme')>-1){
-              anElem.style.transition = 'fill-opacity 3s linear';
-              anElem.style.fillOpacity= "1";
-            }
-          }
-          if(i<elems.length){
-          i++;
-          fillIt(elems[i], i);
-          }else {
-          // i=0;
-          // console.log('run');
-          setTimeout(function(){logoSvg.style.animation='size 1s linear forwards' }, 1500);
-          setTimeout(function(){removeStroke(elems[i],i)}, 3000) //wait 3s before remove stroke
-          }
-        }
-        function fill(){
-          gLogo.style.filter='url(#f2)';
-        }
-        function removeStroke(elem,i){
-          if(elem!=null){
-          elem.style.transition = 'stroke 1.5s linear';
-          elem.style.stroke = '#a0a0a0';
-          elem.style.strokeWidth = '1px';
-        }if(i<elems.length){
-          i++;
-          removeStroke(elems[i], i);}
-        }
-        /* Element Loop
-          0 : A
-          1 : N
-          2 : A2
-          3 : Y
-          4 : A3
-          5 : Aa1
-          6 : Aa2
-          7 : Aa3
-          8 : a1
-          9 : n
-          10 : a2
-          11 : y
-          12 : a3
-          13 : last
-        */
-        function startDraw(i){ //choisi qu'elle Element Dessiné
-          if(i<elems.length){
-            if( i == elems.length-1){setTimeout(function(){drawlogo(elems[i]); i=0; fillIt(elems[i], i);},150)
-          } //draw last item and fill it
-          //  if(i==13){setTimeout(function(){},10)}
-            else if( i >= elems.length-2){setTimeout(function(){drawlogo(elems[i]); i++; startDraw(i);},150) }
-            else if(i > elems.length-5){setTimeout(function(){drawlogo(elems[i]); i++; startDraw(i)},50)}
-            else if(i==elems.length-6){setTimeout(function(){drawlogo(elems[i]); i++; startDraw(i)},400)}
-            else if(i>elems.length-9){setTimeout(function(){drawlogo(elems[i]); i++; startDraw(i)},10)}
-            else if(i==0){setTimeout(function(){drawlogo(elems[i]); i++; startDraw(i)},100)}
-            else setTimeout(function(){drawlogo(elems[i]); i++;startDraw(i)},350);
-          }
-        }
-        setTimeout(function(){startDraw(0)},100);
-
+    <footer class='foot_bg'></footer>
+    <script type="text/javascript" src='js/dessineLogo.js'> //logo
     </script>
-    <script type="text/javascript"> // Cadre
-      function cadreSize(){
-        var size = window.innerWidth*0.1;
-        var cadres = document.getElementsByClassName('cadre');
-        for(var i = 0; i< cadres.length ; i++){
-          cadres[i].style.width = size;
-          cadres[i].style.height = size;
-        }
-      }
-      cadreSize();
-      window.addEventListener('resize', cadreSize, true);
-      //Class d'un cadre
-        function Cadre(snap, text, icon, color, url){
-          // this.position = {x:0,y:0}
-          this.s = snap;
-          this.color = color;
-          this.url = url;
-          this.bool;
-          this.cadre = this.s.rect(1,1,598,599)
-            .attr({
-              pointerEvents:"none",
-              strokeWidth:2,
-              stroke: "#525252",
-              fill: this.color,
-              // fill: "0a0a0a",
-              fillOpacity: 0,
-              strokeDasharray:300,
-              strokeDashoffset:750
-            });
-          this.icon = this.s.append(icon);
-
-          this.innerRect = this.icon.rect(0,200,600,170)
-          .attr({
-            class:'innerRect',
-            pointerEvents:'none',
-            fill:'#303030',
-            stroke:'none',
-            transform: 'rotate(-45,-200,400)'
-          });
-          this.text = this.icon.text(170,350,text)
-            .attr({fontSize:100, fillOpacity:0, fill:color, stroke:'none',
-          transform: 'rotate(-45,-450,400)', pointerEvents:'none'
-          });
-          this.make = function(){this.bool=true;cadre(this); glow(this,this.icon);
-            if(this.soonCheck)this.mess.animate({fillOpacity:1},500);
-          };
-          this.unMake = function(){this.bool=false;resetCadre(this.cadre); unGlow(this.icon);
-            if(this.soonCheck)this.mess.animate({fillOpacity:0},500);
-          };
-          this.add = function(el){this.s.append(el)};
-        }
-        Cadre.prototype.click= function(section){
-          // var section = document.getElementById("section-"+this.url);
-          if(section!=null)
-          section.make(this.url);
-
-        }
-        Cadre.prototype.soon = function(a){
-          this.soonCheck = a;
-          this.mess = this.s.text(150,500,'Prochainement!')
-            .attr({
-              pointerEvents: 'none',
-              fontSize:"50px",
-              fill:'#faaa10',
-              fillOpacity:0
-            });
-        }
-
-        //animation du cadre
-        function cadre(el){
-          el.cadre.animate({strokeDasharray: 600, strokeDashoffset: 0, stroke: "#959595", strokeWidth:'10px',fill:el.color, fillOpacity:0.89}, 500, mina.linear);
-        }
-        //remise à zero du cadre
-        function resetCadre(el){
-          el.animate({strokeDasharray:300, strokeDashoffset: 750, stroke:'#525252', strokeWidth:'2px', fill:'#eaeaea', fillOpacity:0},500);
-        }
-        //animation inner cadre
-        function glow(s, el){
-          if(s.bool){
-            el.select('text').animate({fillOpacity:1, transform:'rotate(-45,-10,420)'},500);
-            el.select('.innerRect').animate({transform:'rotate(-45,0,400)'},500);
-            // if(el.select('.red')!=null)
-              // el.selectAll('.red').animate({fill:"#aa2032"},500);
-            // el.select(".child").animate({stroke:'#232323'},500);
-            el.selectAll(".beat").animate({fill:'#959595'},500,function(){if(s.bool)el.selectAll(".beat").animate({fill:'#d9d9d9'},500,function(){glow(s, el)})});
-          }
-        }
-        //reset inner
-        function unGlow(el){
-          // el.animate({fill:"#525252", stroke:'#525252'},500);
-          // el.select(".child").animate({stroke:'#525252'},500);
-          el.select('.innerRect').animate({transform:'rotate(-45,-200,400)'},500,mina.easein);
-          if(el.selectAll('.beat')!=null)
-            el.selectAll(".beat").animate({fill:'#232323'},500);
-            el.selectAll(".red").animate({fill:'#232323'},500);
-          el.select('text').animate({fillOpacity:0, transform:'rotate(-45,-250,420)'},500,mina.easein);
-        }
-
-        function afficheCadre(){
-          var cadres = document.getElementsByClassName('cadre');
-          for(var i =0;i<cadres.length; i++){
-            cadres[i].style.display='inline-block';
-            // cadres[i].style.opacity='0';
-            // cadres[i].style.animation='show_left 1s ease-in forwards, transparence 0.5s 0.2s linear reverse forwards';
-          }
-          initCadre();
-        }
-        setTimeout(function(){afficheCadre()}, 4000);
+    <script type="text/javascript" src='js/cadres.js'> // Cadre
     </script>
-    <script type="text/javascript"> // animation Cadre
-      function animateCadre(svg, over){
-
-        // var cadres = document.getElementsByClassName('cadre');
-        var elem = svg.parentElement;
-        // elem.style.transition = 'transform 0.5s linear forwards';
-          if(over){
-            // console.log(svg.getAttribute('id'));
-            if(svg.getAttribute('id')=='video')
-            // elem.style.transform='rotate('+10+'deg)';
-            elem.style.animation='rotation 1s 0.4s ease-out infinite';
-            if(svg.getAttribute('id')=='audio')
-            elem.style.animation='jump 1s 0.4s ease-out infinite';
-
-            if(svg.getAttribute('id')=='photo')
-            elem.style.animation='ring 1s 0.5s ease-out infinite';
-          }
-          // else elem.style.transform='rotate(0deg)';
-          else elem.style.animation='';
-      }
-
+    <script type="text/javascript" src='js/sections.js'> // les Sections
     </script>
-    <script type="text/javascript"> // les Sections
-        function close(){ //fermer les sections
-          var sections = document.getElementsByTagName('section');
-          for(var i=0;i<sections.length;i++)
-            sections[i].style.display='none';
-        }
-
-        //Class Section
-        function Section(section){
-          this.section = section;
-          this.s = Snap(section.getElementsByTagName("svg")[0]);
-          this.close = this.s.text("100%","20","fermer") //button fermer
-            .attr({
-              fill: '#a0a0a0',
-              fillOpacity:'0',
-              cursor:'pointer',
-              transform: 'translate(-50%,0)'
-          });
-          this.rect = this.s.rect(0,0,"100%","100%");
-          this.rect.attr({
-            stroke : 'none',
-            transform:'matrix(1,0,0,1,0,500)',
-            pointerEvents:'none',
-            fill: "#5a5a5a",
-            // stroke: '#aeaeae',
-            // fillOpacity:1,
-             fillOpacity:0.53
-          });
-          this.g = this.s.g(this.rect, this.close);
-          }
-
-        Section.prototype.make = function(url){
-          var overlay = document.getElementById("overlay");
-          overlay.style.display = 'block';
-          if(this.section.id == 'section-'+url){
-            this.section.style.display='block';
-            this.section.style.border='1px solid white';
-
-          }
-          this.rect.animate({transform:'s1.2'},300,mina.easeout);
-          this.close.animate({fillOpacity:1},300);
-          var loop = this.section.getElementsByClassName('video');
-          for(var i=0; i<loop.length; i++)
-            afficheElem(loop[i], i);
-
-
-        }
-        Section.prototype.fermer = function(){
-          this.rect.animate({transform:'matrix(1,0,0,1,0,500)'},100,function(){close()});
-          this.close.attr({fillOpacity:0});
-          var loop = this.section.getElementsByClassName('video');
-          for(var i=0; i<loop.length; i++)
-            fermerElem(loop[i], i);
-        }
-        Section.prototype.add = function(el){
-          this.s.add(el);
-        }
-
-        function afficheElem(el, time){
-          el.style.animation='reset 1s '+0.1*time+'s linear forwards, transparence 1s '+0.1*time+'s ease reverse forwards';
-        }
-
-        function fermerElem(el, time){
-          el.style.animation='reset 1ms linear reverse forwards';
-          el.style.opacity='0';
-        }
-    </script>
-    <script type="text/javascript"> //Action and init elem
-      //Create ELements Svg
-      function initCadre(){
-      var section = new Section(document.getElementById("section-video")); //create Section Video
-      section.close.click(function(){section.fermer()});
-
-      // Elements Cadres
-      var s = Snap("#audio"); //audio
-      var g = document.getElementById('g');
-      var audio = new Cadre(s, 'audio', g, "#2050a7", 'audio');
-      audio.soon(true);
-
-      var videoSvg = Snap('#video');//video
-      var gVideo = document.getElementById('gVideo');
-      var play = document.getElementById('play');
-      var video = new Cadre(videoSvg, 'video', gVideo, "#207073",'video');
-
-      var photoSvg = Snap('#photo');
-      var gPhoto = document.getElementById('gPhoto');
-      var photo = new Cadre(photoSvg, 'galerie', gPhoto, "#17a250",'photo');
-
-      var evenSvg = Snap('#event');
-      var gEven = document.getElementById('gEven');
-      var even = new Cadre(evenSvg, 'event', gEven, "#9E0E40",'event');
-
-      // Actions souries sur les objets svg
-      s.mouseover(function(e){audio.make(); animateCadre(e.target,true)});
-      s.mouseout(function(e){audio.unMake(); animateCadre(e.target,false)});
-      s.click(function(){audio.click()});
-
-      video.add(play);
-      videoSvg.mouseover(function(e){video.make(), animateCadre(e.target,true)});
-      videoSvg.mouseout(function(e){video.unMake(), animateCadre(e.target,false)});
-      videoSvg.click(function(){video.click(section)});
-
-      photoSvg.mouseover(function(e){photo.make();animateCadre(e.target,true)});
-      photoSvg.mouseout(function(e){photo.unMake();animateCadre(e.target,false)});
-      photoSvg.click(function(){photo.click()});
-
-      evenSvg.mouseover(function(){even.make()});
-      evenSvg.mouseout(function(){even.unMake()});
-      evenSvg.click(function(){even.click()});
-      //fermer si click overlay
-      var overlay = document.getElementById('overlay');
-      overlay.addEventListener('click', function(event){ if(event.target == overlay)section.fermer(); });
-}
-
-
+    <script type="text/javascript" src='js/main.js'> //Action and init elem
     </script>
     <script type="text/javascript" src='js/anime2.js'></script>
-    <script type="text/javascript" >//les videos
+    <script type="text/javascript">//les videos
 
       var tag = document.createElement('script');
       tag.src = "https://www.youtube.com/iframe_api";

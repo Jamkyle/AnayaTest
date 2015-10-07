@@ -1,3 +1,105 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab|Bitter|Comfortaa|Poiret+One);
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+li {
+  list-style: none; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+.font-Openss {
+  font: "Open Sans", sans-serif; }
+
+.font-RobotSb {
+  font: "Roboto Slab", serif; }
+
+.font-Bitter {
+  font: "Bitter", serif; }
+
+.font-Comforta {
+  font: "Comfortaa", cursive; }
+
+.font-Poiretone {
+  font: "Poiret One", cursive; }
+
+body {
+  background: #02001a; }
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -moz-radial-gradient(center, circle cover, rgba(2, 2, 2, 0) 0%, rgba(2, 2, 2, 0) 41%, rgba(2, 2, 2, 0.8) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(2, 2, 2, 0.1)), color-stop(41%, rgba(2, 2, 2, 0.4)), color-stop(100%, rgba(2, 2, 2, 0.8)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(2, 2, 2, 0.16) 0%, rgba(2, 2, 2, 0.47) 41%, #020202 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(2, 2, 2, 0.1) 0%, rgba(2, 2, 2, 0.47) 41%, rgba(2, 2, 2, 0.8) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(2, 2, 2, 0.1) 0%, rgba(2, 2, 2, 0.47) 41%, rgba(2, 2, 2, 0.8) 100%);
+  background: radial-gradient(circle at center, rgba(2, 2, 2, 0.1) 10%, rgba(2, 2, 2, 0.47) 50%, #020202 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b020202', endColorstr='#ad020202',GradientType=1 );
+  opacity: 0.5;
+  z-index: -99; }
+
 #logoSvg path {
   transition: stroke-width 1s linear;
   -webkit-transition: stroke-width 1s linear;
@@ -6,6 +108,17 @@
   fill-opacity: 0;
   fill-rule: evenodd;
   overflow: visible; }
+
+.section {
+  position: relative;
+  margin: auto;
+  width: 60%;
+  height: 75%;
+  -webkit-transform: translate(0, 15%);
+  transform: translate(0, 15%);
+  padding: 17px;
+  overflow: hidden;
+  z-index: 1099; }
 
 .logo {
   position: absolute;
@@ -22,18 +135,6 @@ section {
   width: 100%;
   height: 100%;
   z-index: 1090; }
-
-.section {
-  text-align: center;
-  position: relative;
-  margin: auto;
-  width: 60%;
-  height: 75%;
-  -webkit-transform: translate(0, 15%);
-  transform: translate(0, 15%);
-  padding: 17px;
-  overflow: hidden;
-  z-index: 1099; }
 
 .liste {
   margin: auto;
@@ -61,14 +162,31 @@ section {
 
 .cadre {
   display: none;
+  margin-left: 10px;
   cursor: pointer; }
+
+._door {
+  border-radius: 25% 25% 25% 25%;
+  box-shadow: 0px 0px 6px #fff;
+  background-clip: padding-box; }
+
+._formless {
+  border-radius: 10% 50% 50% 50%;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid #aeaeae; }
+
+._circle {
+  border-radius: 50% 50% 50% 50%;
+  background: rgba(255, 255, 255, 0.7); }
+
+._rect {
+  background: white; }
 
 .video {
   display: inline-block;
   cursor: pointer;
-  margin: 12px 10px;
+  margin: 5px 2px;
   width: 20%;
-  height: 16%;
   background: #100aad;
   transform: matrix(1, 0, 0, 1, 0, 500);
   opacity: 0; }
@@ -96,18 +214,38 @@ section {
   display: none; }
 
 #section-video {
-  border-radius: 10px; }
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px #fff;
+  background-clip: padding-box;
+  background: rgba(0, 0, 0, 0.2); }
+
+#section-video .liste {
+  position: relative; }
 
 .menu {
   display: block;
   position: absolute;
-  width: 50%;
   left: 50%;
   bottom: 5%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 0%);
   text-align: center; }
 
 .menu svg {
+  display: block;
+  float: left;
+  height: 200px;
+  width: 200px; }
+
+.menu_info {
+  display: none;
+  position: absolute;
+  top: 50%;
+  width: 25%;
+  right: 0;
+  transform: translate(0, -50%); }
+
+.menu_info svg {
   display: block;
   float: left;
   height: 200px;
